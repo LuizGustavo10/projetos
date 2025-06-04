@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Meu site </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+
+    <style>
+        .altoContraste{
+            background-color: black !important;
+            color: yellow !important;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Cabeçalho do meu site -->
+    <header>
+        <nav class="menu">
+            <div class="celular"> &#9776 </div>
+             <ul>
+                <li> <img src="logo.png" alt="" width="40" class="logo"> </li>
+                <li> <a href="#inicio"> Informações pessoais</a>  </li>
+                <li> <a href="#endereco"> Endereço</a> </li>
+                <li> <a href="#"> Experiências </a> </li>
+                <li> <a href="#formacao"> Formação </a> </li>
+                <li> <a href="#redes"> Contato </a> </li>
+
+                <li> <button onclick="mudarTamanhoFonte(1)">A+</button> </li>
+                <li> <button onclick="mudarTamanhoFonte(-1)">A-</button> </li>
+                <li> <button onclick="toggleContrast()">Contraste</button> </li>
+                <li> <button onclick="lerTexto()">🔊 Ler Página</button> </li>
+                <li> <button onclick="resetAcessibilidade()">Resetar</button> </li>
+
+             </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    <section id="inicio">
+        <h2>Luiz Gustavo Francisco</h2>
+        <p> Programador Full-Stack </p>
+
+        <img id="perfil" width="200"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3yTmxn5ibjY76AvQO6_ZCrmPkFQCUPI-K2U9kvtn4Rzttg3vMdFUx9-o1sciyQzypuIk&usqp=CAU">
+
+        <h3 class="titulo"> Informações Pessoais </h3>
+        <ul class="informacoes">
+            <li> Telefone: 4002-8922 </li>
+            <li> Email: luiz.francisco@docente.pr.senac.br </li>
+        </ul>
+
+    </section>
+
+    <section id="endereco">
+        <h3 class="titulo"> Endereço </h3>
+
+        <ul class="informacoes">
+            <li>Av. Fioravante José Montanher </li>
+            <li> Número: 576</li>
+            <li> Bairro: Centro </li>
+            <li> Complemento: Próximo a delegacia </li>
+        </ul>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.2183930056362!2d-52.98765552563872!3d-22.75727507936065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948d9733b7462733%3A0x5d5e4007fad195c0!2sSenac%20Nova%20Londrina!5e0!3m2!1spt-BR!2sbr!4v1742426680943!5m2!1spt-BR!2sbr"
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+    <section id="formacao">
+        <h3 class="titulo"> Formação </h3>
+        <ul class="informacoes">
+            <li> Colégio Estadual Princesa Isabel </li>
+            <li> Informática - CDI Profissionalizante</li>
+            <li> IFPR - Análise e Desenvolvimento de Sistemas</li>
+            <li> Pós MBA Gestão de Negócios e Inovoção </li>
+            <li> Pós Especialização em Docencia do Ensino Técnico</li>
+        </ul>
+    </section>
+
+    <section id="redes">
+        <h3 class="titulo"> Redes Sociais </h3>
+        <ul class="informacoes">
+            <li> <a target="_blank" href="https://g1.globo.com"> <i class="fa-brands fa-square-facebook fa-2xl" style="color: #74C0FC;"></i> Facebook </a> </li>
+            <li> <a target="_blank" href="https://g1.globo.com"> <i class="fa-brands fa-instagram fa-2xl" style="color: #b030df;"></i> Instagram </a> </li>
+            <li> <a target="_blank" href="#"> <i class="fa-brands fa-linkedin fa-2xl" style="color: #74C0FC;"></i> Linkedin </a> </li>
+            <li> <a target="_blank" href="http://wa.me/+5544998521042"><i class="fa-brands fa-whatsapp fa-2xl" style="color: #63E6BE;"></i>  Whatsapp </a> </li>
+            <li> <a href="sobre.html"> Sobre </a> </li>
+        </ul>
+
+    </section>
+
+    <footer class="rodape">
+        <p> Criado por <b> Luiz </b> (2025) </p>
+        <cite> Todos os direitos reservados</cite>
+        <br>
+        <progress></progress>
+    </footer>
+
+    </main>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+    <script src="script.js"></script>
+    <script>
+        let tamanhoFonte = 16;
+
+        function mudarTamanhoFonte(soma){
+            //tamanho de fonte = 16 + 1
+            //tamanho de fonte = 16 + -1
+            tamanhoFonte = tamanhoFonte + soma;
+            document.body.style.fontSize = tamanhoFonte + 'px';
+        }
+
+        function toggleContrast(){
+            document.body.classList.toggle('altoContraste');
+            //personaliza todas seções do site
+            document.querySelectorAll('section').forEach(secao => {
+                secao.style.backgroundColor = 'black';
+            });
+        }
+
+        function lerTexto(){
+            const texto = document.querySelector('main').innerText;
+            const discurso = new SpeechSynthesisUtterance(texto);
+            discurso.lang = 'pt-BR';
+            speechSynthesis.speak(discurso);
+        }
+        
+        function resetAcessibilidade() {
+            location.reload();
+        }
+
+        
+    </script>
+</body>
+
+</html>
