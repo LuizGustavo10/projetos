@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Compra de Áreas - Sistema</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container mt-4">
+    <h2 class="mb-4">Compra de Áreas de Cursos</h2>
+
+<!-- Adicionando mais um campo ao formulário de filtros -->
+<form class="row g-3">
+  <div class="col-md-3">
+    <label for="regiao" class="form-label">Região</label>
+    <select id="regiao" class="form-select">
+      <option selected disabled>Escolha a Região...</option>
+      <option value="1">Norte</option>
+      <option value="2">Centro-Oeste</option>
+    </select>
+  </div>
+
+  <div class="col-md-3">
+    <label for="cidade" class="form-label">Cidade</label>
+    <select id="cidade" class="form-select" disabled>
+      <option selected>Escolha a Cidade...</option>
+    </select>
+  </div>
+
+  <div class="col-md-3">
+    <label for="ponto_focal" class="form-label">Ponto Focal</label>
+    <select id="ponto_focal" class="form-select" disabled>
+      <option selected>Escolha o Ponto Focal...</option>
+    </select>
+  </div>
+
+  <div class="col-md-3">
+    <label for="tipo_empresa" class="form-label">Tipo de Empresa</label>
+    <select id="tipo_empresa" class="form-select">
+      <option selected disabled>Escolha o Tipo...</option>
+      <option value="Publica">Pública</option>
+      <option value="Privada">Privada</option>
+    </select>
+  </div>
+</form>
+
+    <hr class="my-4">
+
+    <!-- Formulário de Compra -->
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="area" class="form-label">Área de Curso</label>
+        <select id="area" class="form-select">
+          <option selected disabled>Escolha a Área...</option>
+          <option value="1">Tecnologia</option>
+          <option value="2">Gastronomia</option>
+          <option value="3">Gestão</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label for="data_compra" class="form-label">Data da Compra</label>
+        <input type="date" id="data_compra" class="form-control" value="2025-07-07">
+      </div>
+
+      <div class="col-md-2 d-flex align-items-end">
+        <button type="button" class="btn btn-primary w-100" id="adicionarBtn">➕ Adicionar</button>
+      </div>
+    </form>
+
+    <hr class="my-4">
+
+    <!-- Lista de Compras -->
+    <h4>Áreas Selecionadas</h4>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Área</th>
+          <th>Data</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela_compras">
+        <!-- Linhas serão adicionadas com JavaScript -->
+      </tbody>
+    </table>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-success" id="finalizarBtn">✅ Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + dependências -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script JS Básico -->
+  <script>
+    const cidadeSelect = document.getElementById('cidade');
+    const pontoFocalSelect = document.getElementById('ponto_focal');
+    const tabela = document.getElementById('tabela_compras');
+    const adicionarBtn = document.getElementById('adicionarBtn');
+    const areaSelect = document.getElementById('area');
+    const dataInput = document.getElementById('data_compra');
+
+    // Simulação: ao selecionar a região, libera cidades
+    document.getElementById('regiao').addEventListener('change', function() {
+      cidadeSelect.removeAttribute('disabled');
+      cidadeSelect.innerHTML = `
+        <option selected disabled>Escolha a Cidade...</option>
+        <option value="1">Maringá</option>
+        <option value="2">Londrina</option>
+      `;
+      pontoFocalSelect.innerHTML = '<option selected>Escolha o Ponto Focal...</option>';
+      pontoFocalSelect.setAttribute('disabled', true);
+    });
+
+    // Simulação: ao selecionar a cidade, libera pontos focais
+    cidadeSelect.addEventListener('change', function() {
+      pontoFocalSelect.removeAttribute('disabled');
+      pontoFocalSelect.innerHTML = `
+        <option selected disabled>Escolha o Ponto Focal...</option>
+        <option value="1">Assistencia social</option>
+        <option value="2">Feclopes</option>
+      `;
+    });
+
+    // Adiciona linha na tabela
+    adicionarBtn.addEventListener('click', function() {
+      const areaText = areaSelect.options[areaSelect.selectedIndex].text;
+      const data = dataInput.value;
+
+      if (!areaSelect.value || !data) {
+        alert("Selecione uma área e data.");
+        return;
+      }
+
+      const linha = document.createElement('tr');
+      linha.innerHTML = `
+        <td>${areaText}</td>
+        <td>${data}</td>
+        <td><button class="btn btn-danger btn-sm">❌</button></td>
+      `;
+      linha.querySelector('button').addEventListener('click', () => linha.remove());
+      tabela.appendChild(linha);
+    });
+
+    // Finalizar
+    document.getElementById('finalizarBtn').addEventListener('click', () => {
+      alert("Compra finalizada com sucesso!");
+    });
+  </script>
+</body>
+</html>
