@@ -6,14 +6,46 @@
     <title> FestEvents </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <style>
+    /*configuração do swiper slide*/
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 500px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* fim da configuração do swiper slide*/
+
+
+
+
       .whatsapp{
         position: fixed;
         z-index: 1000;
@@ -151,46 +183,70 @@
 
      <div class="d-flex justify-content-center flex-wrap">
      <h2 class="text-center m-5"> Eventos </h2>
-     <div class="card-deck">
-    
 
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" style="height:180px;"  src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg" alt="Imagem de capa do card">
-        <div class="card-body">
-          <h5 class="card-title">Casamento ao ar livre</h5>
-          <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          <a href="#" class="btn btn-primary">Visitar</a>
+  <!-- inicio Swiper js slide dos eventos-->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" style="height:180px;"  src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Casamento ao ar livre</h5>
+            <p class="card-text"> Realizado em Itaúna</p>
+            <a href="#" class="btn btn-primary">Visitar</a>
+          </div>
         </div>
       </div>
 
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" style="height:180px;"  src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg" alt="Imagem de capa do card">
-        <div class="card-body">
-          <h5 class="card-title">Formatura de Direito</h5>
-          <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          <a href="#" class="btn btn-primary">Visitar</a>
+      <div class="swiper-slide">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" style="height:180px;"  src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Casamento ao ar livre</h5>
+            <p class="card-text">Realizado em Itaúna.</p>
+            <a href="#" class="btn btn-primary">Visitar</a>
+          </div>
         </div>
       </div>
 
+      <div class="swiper-slide">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" style="height:180px;"  src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Formatura de Direito</h5>
+            <p class="card-text">Realizado em Itaúna.</p>
+            <a href="#" class="btn btn-primary">Visitar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" style="height:180px;"  src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg" alt="Imagem de capa do card">
         <div class="card-body">
           <h5 class="card-title">Palestra Comercial</h5>
-          <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+          <p class="card-text">Realizado em Itaúna.</p>
           <a href="#" class="btn btn-primary">Visitar</a>
         </div>
       </div>
+      </div>
 
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" style="height:180px;"  src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg" alt="Imagem de capa do card">
-        <div class="card-body">
-          <h5 class="card-title">Evento Beneficente</h5>
-        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-          <a href="#" class="btn btn-primary">Visitar</a>
+      <div class="swiper-slide">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" style="height:180px;" src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Evento Beneficente</h5>
+          <p class="card-text">Realizado em Itaúna.</p>
+            <a href="#" class="btn btn-primary">Visitar</a>
+          </div>
         </div>
       </div>
-     </div>
 
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+    <!-- FIM Swiper js slide dos eventos-->
 
     </div>
 
@@ -200,50 +256,74 @@
     </div>
 
     <h2 class="text-center m-5"> Viagens </h2>
-    <div class="card-deck">
-   
 
-     <div class="card" style="width: 18rem;">
-       <img class="card-img-top" style="height:180px;"  src="https://www.fatosdesconhecidos.com.br/wp-content/uploads/2016/03/Cristo-Redentor-capa-1923x1279.jpg" alt="Imagem de capa do card">
-       <div class="card-body">
-         <h5 class="card-title">Viagem ao RJ</h5>
-         <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-         <a href="#" class="btn btn-primary">Visitar</a>
-       </div>
-     </div>
-
-     <div class="card" style="width: 18rem;">
-       <img class="card-img-top" style="height:180px;"  src="https://www.civitatis.com/f/brasil/balneario-camboriu/tour-balneario-camboriu-completo-r32.jpg" alt="Imagem de capa do card">
-       <div class="card-body">
-         <h5 class="card-title">Balneário Camboriú </h5>
-         <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-         <a href="#" class="btn btn-primary">Visitar</a>
-       </div>
-     </div>
-
-     <div class="card" style="width: 18rem;">
-       <img class="card-img-top" style="height:180px;"  style="height: 170px;" src="https://th.bing.com/th/id/OIP.e_DLFJias5wdoE4tjtxgqAHaDy?rs=1&pid=ImgDetMain" alt="Imagem de capa do card">
-       <div class="card-body">
-         <h5 class="card-title">Gramado </h5>
-         <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-         <a href="#" class="btn btn-primary">Visitar</a>
-       </div>
-     </div>
-
-     <div class="card" style="width: 18rem;">
-       <img class="card-img-top" style="height:180px;"  src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg" alt="Imagem de capa do card">
-       <div class="card-body">
-         <h5 class="card-title">Evento Beneficente</h5>
-       <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-         <a href="#" class="btn btn-primary">Visitar</a>
-       </div>
-     </div>
+    <!-- SLIDE DE VIAGENS -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+  
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" style="height:180px;"  src="https://www.fatosdesconhecidos.com.br/wp-content/uploads/2016/03/Cristo-Redentor-capa-1923x1279.jpg" alt="Imagem de capa do card">
+            <div class="card-body">
+              <h5 class="card-title">Viagem ao RJ</h5>
+              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+              <a href="#" class="btn btn-primary">Visitar</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" style="height:180px;"  style="height: 170px;" src="https://th.bing.com/th/id/OIP.e_DLFJias5wdoE4tjtxgqAHaDy?rs=1&pid=ImgDetMain" alt="Imagem de capa do card">
+            <div class="card-body">
+              <h5 class="card-title">Gramado </h5>
+              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+              <a href="#" class="btn btn-primary">Visitar</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" style="height:180px;"  src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg" alt="Imagem de capa do card">
+            <div class="card-body">
+              <h5 class="card-title">Evento Beneficente</h5>
+            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+              <a href="#" class="btn btn-primary">Visitar</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" style="height:180px;"  style="height: 170px;" src="https://th.bing.com/th/id/OIP.e_DLFJias5wdoE4tjtxgqAHaDy?rs=1&pid=ImgDetMain" alt="Imagem de capa do card">
+            <div class="card-body">
+              <h5 class="card-title">Gramado </h5>
+              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+              <a href="#" class="btn btn-primary">Visitar</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" style="height:180px;"  style="height: 170px;" src="https://th.bing.com/th/id/OIP.e_DLFJias5wdoE4tjtxgqAHaDy?rs=1&pid=ImgDetMain" alt="Imagem de capa do card">
+            <div class="card-body">
+              <h5 class="card-title">Gramado </h5>
+              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+              <a href="#" class="btn btn-primary">Visitar</a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
+     <!-- FIM DOS SLIDE DE VIAGENS -->
 
-    
 
     <div class="d-flex justify-content-center m-5">
-      <a href="#" class="btn btn-primary btn-lg"> Próximos Destinos  </a>
+      <a href="#" class="btn btn-primary btn-lg"> Ver todos os destinos  </a>
     </div>
 
     <a href="https://wa.me/+5544999237694" class="whatsapp">
@@ -306,7 +386,32 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      autoplay:{
+        delay: 2000,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+      200: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+    });
+    </script>
 
 
   </body>
