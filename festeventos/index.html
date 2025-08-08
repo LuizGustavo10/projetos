@@ -6,42 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Fest Eventos </title>
 
-  <style>
-    /*configuração do swiper slide*/
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      font-size: 14px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .swiper {
-      width: 100%;
-      height: 500px;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* fim da configuração do swiper slide*/
-  </style>
 
   <!-- importações usadas -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/2.0.0/scrollReveal.js"
@@ -64,7 +28,7 @@
   <!-- barra de navegação ------------------------------------------------------------------------------>
   <nav class="navbar navbar-expand-lg navbar-dark menu fixed-top">
     <img src="./fotos/logo.png" width="60" class="animate__animated animate__fadeIn">
-    <a class="navbar-brand animate__animated animate__fadeIn" href="#">Fest Eventos</a>
+    <a class="navbar-brand animate__animated animate__fadeIn" href="./index.html">Fest Eventos</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
       aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
@@ -73,13 +37,13 @@
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#"> Viagens <span class="sr-only">(página atual)</span></a>
+          <a class="nav-link" href="./Destinos/galeria.html"> Destinos <span class="sr-only">(página atual)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#"> Eventos </a>
+          <a class="nav-link" href="./isabela/eventos.html"> Eventos </a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#"> Sobre </a>
+          <a class="nav-link" href="./sobre/sobre.html"> Sobre </a>
         </li>
 
         <li class="nav-item active dropdown">
@@ -88,9 +52,9 @@
             Contato
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#"> Fale Conosco </a>
-            <a class="dropdown-item" href="#"> Trabalhe Conosco </a>
-            <a class="dropdown-item" href="#"> Seja Nosso Parceiro </a>
+            <a class="dropdown-item" href="./isabela/index.html"> Fale Conosco </a>
+            <a class="dropdown-item" href="./isabela/index.html"> Trabalhe Conosco </a>
+            <a class="dropdown-item" href="./Parceiro/index.html"> Seja Nosso Parceiro </a>
           </div>
         </li>
 
@@ -145,24 +109,19 @@
       <div class="col-md-7">
         <h2 class="text-center revelar"> Seja bem-vindo <br> a Fest Eventos </h2>
         <p class="text-justify revelar">
-          Somos uma empresa especializada em transformar momentos em experiências inesquecíveis. Atuando nas áreas de
-          <b>eventos</b> e <b>turismo</b>,
-          oferecemos soluções completas, criativas e personalizadas para atender às mais diversas necessidades de nossos
-          clientes — seja na realização
-          de eventos corporativos, sociais ou na organização de viagens memoráveis.
-          Na <b>Fest Eventos</b>, cuidamos de todos os detalhes: do planejamento à execução. Nossa equipe é formada por
-          profissionais apaixonados pelo que
-          fazem, sempre prontos para criar eventos marcantes, com excelência, pontualidade e inovação.
-          Já na <b>Fest Turismo</b>, levamos você para viver o mundo com conforto, segurança e organização. Seja uma
-          viagem em grupo, excursões, roteiros
-          personalizados ou pacotes turísticos completos, garantimos experiências únicas que ficam para sempre na
-          memória.
-          Com sede em Nova Londrina, atuamos com seriedade, criatividade e comprometimento, sempre buscando
-          superar expectativas.
+          Transforme momentos comuns em experiências extraordinárias com a Fest! Seja organizando o evento dos seus
+          sonhos - desde casamentos inesquecíveis até eventos corporativos de alto impacto - ou planejando sua próxima
+          aventura pelos Destinos mais incríveis do mundo, nossa equipe especializada cuida de cada detalhe para que
+          você viva apenas os melhores momentos. Na Fest Eventos, criamos celebrações únicas e personalizadas que ficam
+          marcadas para sempre na memória dos seus convidados, enquanto na venda de Destinos, oferecemos roteiros exclusivos,
+          viagens em grupo e pacotes completos com total segurança e conforto. Não deixe seus projetos e sonhos de
+          viagem para depois - entre em contato hoje mesmo e descubra como podemos transformar suas ideias em realidade,
+          superando todas as suas expectativas com a excelência e criatividade que só a Fest oferece!
         </p>
 
       </div>
       <div class="col-md-5">
+        <br><br><br>
         <img class="img-fluid rounded revelar" src="./fotos/evento.jpg">
       </div>
     </div>
@@ -175,68 +134,58 @@
       <!-- inicio Swiper js slide dos eventos-->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-
+          
           <div class="swiper-slide">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" style="height:180px;"
-                src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg"
-                alt="Imagem de capa do card">
+            <div class="card" style="width: 100%;">
+              <img class="card-img-top" style="height:180px;" src="fotos/1.jpeg" alt="Imagem de capa do card">
               <div class="card-body">
-                <h5 class="card-title">Casamento ao ar livre</h5>
-                <p class="card-text"> Realizado em Itaúna</p>
-                <a href="#" class="btn btn-primary">Visitar</a>
+                <h5 class="card-title">Chá de revelação</h5>
+                <!-- <p class="card-text"> ;Realizado em Itaúna</p> -->
+
               </div>
             </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" style="height:180px;"
-                src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg"
-                alt="Imagem de capa do card">
+            <div class="card" style="width: 100%;">
+              <img class="card-img-top" style="height:180px;" src="fotos/2.jpeg" alt="Imagem de capa do card">
               <div class="card-body">
-                <h5 class="card-title">Casamento ao ar livre</h5>
-                <p class="card-text">Realizado em Itaúna.</p>
-                <a href="#" class="btn btn-primary">Visitar</a>
+                <h5 class="card-title">Chá de Bebê</h5>
+                <!-- <p class="card-text">Realizado em Itaúna.</p> -->
+
               </div>
             </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" style="height:180px;"
-                src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg"
-                alt="Imagem de capa do card">
+            <div class="card" style="width: 100%;">
+              <img class="card-img-top" style="height:180px;" src="fotos/3.jpeg" alt="Imagem de capa do card">
               <div class="card-body">
-                <h5 class="card-title">Formatura de Direito</h5>
-                <p class="card-text">Realizado em Itaúna.</p>
-                <a href="#" class="btn btn-primary">Visitar</a>
+                <h5 class="card-title">Evento ao ar livre</h5>
+                <!-- <p class="card-text">Realizado em Itaúna.</p> -->
+
               </div>
             </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" style="height:180px;"
-                src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg"
-                alt="Imagem de capa do card">
+            <div class="card" style="width: 100%;">
+              <img class="card-img-top" style="height:180px;" src="fotos/4.jpeg" alt="Imagem de capa do card">
               <div class="card-body">
-                <h5 class="card-title">Palestra Comercial</h5>
-                <p class="card-text">Realizado em Itaúna.</p>
-                <a href="#" class="btn btn-primary">Visitar</a>
+                <h5 class="card-title">Evento de dia das mães</h5>
+                <!-- <p class="card-text">Realizado em Itaúna.</p> -->
+
               </div>
             </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" style="height:180px;"
-                src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg"
-                alt="Imagem de capa do card">
+            <div class="card" style="width: 100%;">
+              <img class="card-img-top" style="height:180px;" src="fotos/3.jpeg" alt="Imagem de capa do card">
               <div class="card-body">
-                <h5 class="card-title">Evento Beneficente</h5>
-                <p class="card-text">Realizado em Itaúna.</p>
-                <a href="#" class="btn btn-primary">Visitar</a>
+                <h5 class="card-title">Evento ao ar livre</h5>
+                <!-- <p class="card-text">Realizado em Itaúna.</p> -->
+
               </div>
             </div>
           </div>
@@ -251,8 +200,7 @@
 
 
     <div class="d-flex justify-content-center m-5">
-      <a href="https://wa.me/+5544999237694" class="btn btn-primary btn-lg m-3"> Fale Conosco </a>
-      <a href="https://wa.me/+5544999237694" class="btn btn-primary btn-lg m-3"> Ver todos Eventos <i
+      <a href="./isabela/eventos.html" class="btn btn-primary btn-lg m-3"> Ver todos Eventos <i
           class="fa-brands fa-eyes"></i></a>
     </div>
 
@@ -266,70 +214,59 @@
       <div class="swiper-wrapper">
 
         <div class="swiper-slide">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" style="height:180px;"
-              src="https://www.fatosdesconhecidos.com.br/wp-content/uploads/2016/03/Cristo-Redentor-capa-1923x1279.jpg"
-              alt="Imagem de capa do card">
+          <div class="card" style="width: 100%;">
+            <img class="card-img-top" style="height:180px;" src="fotos/SESC- Caiobá.png" alt="Imagem de capa do card">
             <div class="card-body">
-              <h5 class="card-title">Viagem ao RJ</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o
-                conteúdo do card.</p>
-              <a href="#" class="btn btn-primary">Visitar</a>
+              <h5 class="card-title">Sesc Caiobá</h5>
+              <p class="card-text"> Paraná </p>
+
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" style="height:180px;" style="height: 170px;"
-              src="https://th.bing.com/th/id/OIP.e_DLFJias5wdoE4tjtxgqAHaDy?rs=1&pid=ImgDetMain"
+          <div class="card" style="width: 100%;">
+            <img class="card-img-top" style="height:180px;" style="height: 170px;" src="fotos/Salto Bandeirantes.jpg"
               alt="Imagem de capa do card">
             <div class="card-body">
               <h5 class="card-title">Gramado </h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o
-                conteúdo do card.</p>
-              <a href="#" class="btn btn-primary">Visitar</a>
+              <p class="card-text">Paraná </p>
+
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" style="height:180px;"
-              src="https://www.pucgoias.edu.br/wp-content/uploads/2022/02/DSC_6379-1.jpg" alt="Imagem de capa do card">
+          <div class="card" style="width: 100%;">
+            <img class="card-img-top" style="height:180px;" src="fotos/parquedoajapao.jpg" alt="Imagem de capa do card">
             <div class="card-body">
-              <h5 class="card-title">Evento Beneficente</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o
-                conteúdo do card.</p>
-              <a href="#" class="btn btn-primary">Visitar</a>
+              <h5 class="card-title">Parque do Japão</h5>
+              <p class="card-text">Paraná</p>
+
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" style="height:180px;" style="height: 170px;"
-              src="https://th.bing.com/th/id/OIP.e_DLFJias5wdoE4tjtxgqAHaDy?rs=1&pid=ImgDetMain"
+          <div class="card" style="width: 100%;">
+            <img class="card-img-top" style="height:180px;" style="height: 170px;" src="fotos/Matinhos.jpg"
               alt="Imagem de capa do card">
             <div class="card-body">
-              <h5 class="card-title">Gramado </h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o
-                conteúdo do card.</p>
-              <a href="#" class="btn btn-primary">Visitar</a>
+              <h5 class="card-title">Matinhos </h5>
+              <p class="card-text">Paraná</p>
+
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" style="height:180px;" style="height: 170px;"
-              src="https://th.bing.com/th/id/OIP.e_DLFJias5wdoE4tjtxgqAHaDy?rs=1&pid=ImgDetMain"
+          <div class="card" style="width: 100%;">
+            <img class="card-img-top" style="height:180px;" style="height: 170px;" src="fotos/Porto Maringá.jpeg"
               alt="Imagem de capa do card">
             <div class="card-body">
-              <h5 class="card-title">Gramado </h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o
-                conteúdo do card.</p>
-              <a href="#" class="btn btn-primary">Visitar</a>
+              <h5 class="card-title">Porto Maringá </h5>
+              <p class="card-text">Paraná</p>
+
             </div>
           </div>
         </div>
@@ -341,23 +278,25 @@
 
 
     <div class="d-flex justify-content-center m-5">
-      <a href="#" class="btn btn-primary btn-lg"> Ver todos os destinos </a>
+      <a href="Destinos/galeria.html" class="btn btn-primary btn-lg"> Ver todos os Destinos </a>
     </div>
 
     <section class="bg-light py-5 text-center revelar">
       <h2> Contamos com os melhores parceiros! </h2>
 
       <div class="d-flex justify-content-center flex-wrap gap-5 mb-4">
-        <img width="100" class="mx-2"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcf9jmTLuyoGsHervhIe6bEP6G6PnB36hpNQ&s">
-        <img width="100" class="mx-2" src="https://www.amapar.com.br/images/sicredi.jpg">
-        <img width="100" class="mx-2"
-          src="https://play-lh.googleusercontent.com/LsrG1we70QdFc8UDYoeUeyPP4_JUDwfnJgdSHR9NdmbYaxdWTtx2g5lPn0dA59XNxVo">
-        <img width="100" class="mx-2"
-          src="https://cooperativismodecredito.coop.br/wp-content/uploads/2024/06/Logo_Sicoob.jpg">
+        <img width="100" class="mx-2" src="fotos/LACTA.png">
+        <img width="100" class="mx-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT35MIwm5FGolZiWDwPgoNNVOoXvXFzzCxIcg&s">
+        <img width="100" class="mx-2" src="https://media.licdn.com/dms/image/v2/C560BAQGHrMW41xBMOA/company-logo_200_200/company-logo_200_200/0/1631347514706?e=2147483647&v=beta&t=L6xzu7XY4pUMFATW7LbxFTCFl1B__3z-gmulyR1C5AY">
+        <img width="100" class="mx-2" src="https://images.seeklogo.com/logo-png/24/2/senac-logo-png_seeklogo-242013.png">
+        <img width="100" class="mx-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4FocYVTY0lTwG8khl2ZblOPoZKm589d7qGA&s">
+      
+      
+        
+        
       </div>
 
-      <a href="#" class="btn btn-outline-primary btn-lg"> Seja Nosso Parceiro</a>
+      <a href="./Parceiro/index.html" class="btn btn-outline-primary btn-lg"> Seja Nosso Parceiro</a>
     </section>
 
   </div>
@@ -372,18 +311,20 @@
       <div class="col-md-3">
         <h5> Navegação </h5>
         <ul class="list-unstyled">
-          <li> <a href="#" class="text-decoration-none text-light"> Sobre nós </a> </li>
-          <li> <a href="#" class="text-decoration-none text-light"> Eventos </a> </li>
-          <li> <a href="#" class="text-decoration-none text-light"> Viagens </a> </li>
+          <li> <a href="./sobre/sobre.html" class="text-decoration-none text-light"> Sobre nós </a> </li>
+          <li> <a href="./isabela/eventos.html" class="text-decoration-none text-light"> Eventos </a> </li>
+          <li> <a href="./Destinos/index.html" class="text-decoration-none text-light"> Viagens </a> </li>
+          <li> <a href="./isabela/experiência.html" class="text-decoration-none text-light"> Dinâmica Final</a> </li>
         </ul>
       </div>
+
 
       <div class="col-md-3">
         <h5> Contato </h5>
         <ul class="list-unstyled">
-          <li> <a href="#" class="text-decoration-none text-light"> Fale conosco </a> </li>
-          <li> <a href="#" class="text-decoration-none text-light"> Trabalhe conosco </a> </li>
-          <li> <a href="#" class="text-decoration-none text-light"> Seja nosso parceiro </a> </li>
+          <li> <a href="./isabela/index.html" class="text-decoration-none text-light"> Fale conosco </a> </li>
+          <li> <a href="./isabela/index.html" class="text-decoration-none text-light"> Trabalhe conosco </a> </li>
+          <li> <a href="./Parceiro/index.html" class="text-decoration-none text-light"> Seja nosso parceiro </a> </li>
           <li> <a href="#" class="text-decoration-none text-light"> Instagram </a> </li>
           <li> <a href="#" class="text-decoration-none text-light"> Facebook </a> </li>
           <li> <a href="#" class="text-decoration-none text-light"> Linkedin </a> </li>
@@ -429,9 +370,15 @@
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -455,7 +402,7 @@
           slidesPerView: 2,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 4,
         },
       },
     });

@@ -29,4 +29,43 @@
 }
 
 
+    /*configuração do swiper slide*/
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 350px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* fim da configuração do swiper slide*/
+     .card {
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+              transition: transform 0.3s ease;
+            }
   
